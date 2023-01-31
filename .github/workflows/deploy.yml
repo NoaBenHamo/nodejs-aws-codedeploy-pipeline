@@ -23,7 +23,7 @@ jobs:
       id: deploy
       run: |
         aws deploy create-deployment \
-        --application-name nodejs-express-app \
-        --deployment-group-name nodejs-express-app-cd1 \
+        --application-name node-js \
+        --deployment-group-name node-app \
         --deployment-config-name CodeDeployDefault.OneAtATime \
         --github-location repository=${{ github.repository }},commitId=${{ github.sha }}
